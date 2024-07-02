@@ -1,14 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { Tilt } from "react-tilt";
+
+gsap.registerPlugin(ScrollTrigger);
 const TwoBody = () => {
   const stringRef = useRef(null);
 
   const initialPath = "M 10 30 Q 600 30 1190 30";
   const finalPath = "M 10 30 Q 600 30 1190 30";
-  const string = stringRef.current;
+  //   const defaultOptions = {
+  //     reverse: false, // reverse the tilt direction
+  //     max: 10, // max tilt rotation (degrees)
+  //     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  //     scale: 0.9, // 2 = 200%, 1.5 = 150%, etc..
+  //     speed: 1000, // Speed of the enter/exit transition
+  //     // transition: true, // Set a transition on enter/exit.
+  //     axis: "x", // What axis should be disabled. Can be X or Y.
+  //     reset: true, // If the tilt effect has to be reset on exit.
+  //     easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+  //   };
 
   const handleMouseMove = (e) => {
+    const string = stringRef.current;
     const rect = string.getBoundingClientRect();
     const y = e.clientY - rect.top;
     const normalizedY = Math.max(0, Math.min(y, rect.height)); // Ensure y is within bounds
@@ -30,11 +46,28 @@ const TwoBody = () => {
     });
   };
 
+  useGSAP(() => {
+    gsap.from(".twoBody", {
+      opacity: 0,
+      //   overflow: "hidden",
+      duration: 0.5,
+      x: 100,
+      ease: "power3.out",
+      scrollTrigger: {
+        scroller: "body",
+        trigger: ".twoBody",
+        start: "top 100%",
+        end: "top 50%",
+        scrub: 2,
+      },
+    });
+  });
+
   return (
     <div style={{ height: "100vh", width: "90%", margin: "auto" }}>
       <div
         ref={stringRef}
-        className="string"
+        className="string "
         style={{
           display: "flex",
           alignItems: "center",
@@ -56,7 +89,16 @@ const TwoBody = () => {
           />
         </svg>
       </div>
-      skills
+
+      <div
+        className="twoBody glass"
+        style={{
+          height: "88vh",
+          width: "85vw",
+          overflowY: "hidden",
+          margin: "auto",
+        }}
+      ></div>
     </div>
   );
 };

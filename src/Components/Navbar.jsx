@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import OneBody from "./OneBody";
 import TwoBody from "./TwoBody";
-import ThreeBody from "./ThreeBody";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
@@ -44,15 +43,15 @@ const Navbar = () => {
           width: "90%",
           height: "15vh",
           color: "white",
-          background: "hsla(0,0%,4%,.25)",
+          // background: "hsla(0,0%,4%,.25)",
           // textAlign: "center",
           display: "flex",
-          justifyContent: "spaceBetween",
+          justifyContent: "spaceAround",
           alignItems: "center",
           borderRadius: "20px",
           margin: "1rem auto auto",
         }}
-        className="nav-container"
+        className="nav-container glass"
       >
         <div
           style={{
@@ -81,7 +80,11 @@ const Navbar = () => {
             padding: "0 5px",
           }}
         >
-          <Link to="#" style={{ background: "none", height: "100%" }}>
+          <Link
+            to="https://github.com/utkarrshhh"
+            target="_blank"
+            style={{ background: "none", height: "100%" }}
+          >
             <div
               className="imgSmallContainer"
               style={{
@@ -101,7 +104,7 @@ const Navbar = () => {
                   objectFit: "contain",
                   objectPosition: "center",
                 }}
-                src="./public/github.png"
+                src="./github.png"
                 alt=""
               />
             </div>
@@ -126,7 +129,7 @@ const Navbar = () => {
                   objectFit: "contain",
                   objectPosition: "center",
                 }}
-                src="./public/twitter.png"
+                src="/twitter.png"
                 alt=""
               />
             </div>
@@ -151,7 +154,7 @@ const Navbar = () => {
                   objectFit: "contain",
                   objectPosition: "center",
                 }}
-                src="./public/linkedin.png"
+                src="/linkedin.png"
                 alt=""
               />
             </div>
@@ -160,7 +163,6 @@ const Navbar = () => {
       </div>
       <OneBody />
       <TwoBody />
-      <ThreeBody />
     </>
   );
 };

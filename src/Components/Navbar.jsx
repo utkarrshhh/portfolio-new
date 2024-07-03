@@ -56,7 +56,7 @@ const Navbar = () => {
         <div
           style={{
             height: "100%",
-            width: "90%",
+            width: "80%",
             display: "flex",
             // justifyContent: "center",
             alignItems: "center",
@@ -72,7 +72,7 @@ const Navbar = () => {
         <div
           className="imgContainer subContainer"
           style={{
-            width: "10%",
+            width: "20%",
             height: "60%",
             display: "flex",
             alignItems: "center",
@@ -80,6 +80,64 @@ const Navbar = () => {
             padding: "0 5px",
           }}
         >
+          <Link
+            to="./UtkarshShuklaResume.pdf"
+            target="_blank"
+            download
+            style={{ background: "none", height: "100%" }}
+          >
+            <div
+              className="imgSmallContainer"
+              style={{
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "5px",
+                filter: "invert(1)",
+              }}
+            >
+              <img
+                style={{
+                  height: "70%",
+
+                  // borderRadius: "50%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                src="/resumeIcon.png"
+                alt="Download Resume"
+              />
+            </div>
+          </Link>
+          <Link
+            to="mailto:utkarsh3639@gmail.com"
+            style={{ background: "none", height: "100%" }}
+          >
+            <div
+              className="imgSmallContainer"
+              style={{
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "5px",
+                filter: "invert(1)",
+              }}
+            >
+              <img
+                style={{
+                  height: "70%",
+
+                  // borderRadius: "50%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                src="/mail.png"
+                alt=""
+              />
+            </div>
+          </Link>
           <Link
             to="https://github.com/utkarrshhh"
             target="_blank"

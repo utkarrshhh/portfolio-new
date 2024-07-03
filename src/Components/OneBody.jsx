@@ -8,16 +8,8 @@ import { Tilt } from "react-tilt";
 const OneBody = () => {
   const containerRef = useRef(null);
   useGSAP(() => {
-    // gsap.from("hr", {
-    //   delay: 1.4,
-    //   duration: 0.5,
-    //   x: -100,
-    //   //   fontWeight: "200",
-    //   opacity: 0,
-    //   ease: "power3.out",
-    // });
     gsap.from(".simpleContainer", {
-      x: 100,
+      scale: 0.3,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
@@ -126,7 +118,12 @@ const OneBody = () => {
                 <img
                   src="/kiitLogo.png"
                   alt=""
-                  style={{ height: "100%", width: "100%" }}
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                  }}
                 />
               </div>
               <p style={{ color: "#17ce59" }}>
@@ -183,7 +180,13 @@ const OneBody = () => {
                 <img
                   src="/image.png"
                   alt=""
-                  style={{ height: "100%", width: "100%", filter: "invert(1)" }}
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    filter: "invert(1)",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                  }}
                 />
               </div>
               <p style={{ color: "rgb(212 232 144)" }}>
@@ -219,20 +222,388 @@ const OneBody = () => {
             height: "70vh",
             width: "20vw",
             padding: "10px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
             //   background: "white",
           }}
         >
           <span
             style={{
               width: "100%",
-              height: "20%",
-              fontSize: "1.4rem",
+              height: "10%",
+              fontSize: "1rem",
               fontWeight: "100",
             }}
           >
-            Languages
+            Skills and Tech stack
             <hr />
           </span>
+          <div
+            className="languagesMiniContainer"
+            style={{
+              height: "85%",
+              width: "100%",
+              border: "1px solid",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "left",
+              //   gap: "4px",
+              color: "white",
+              padding: "10px",
+            }}
+          >
+            <div
+              className="skillContain jsSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/java-script.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>JavaScript</div>
+            </div>
+            <div
+              className="skillContain htmlSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/html.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>HTML</div>
+            </div>
+            <div
+              className="skillContain gitSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/githubTransparent.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>GitHub</div>
+            </div>
+            <div
+              className="skillContain cssSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/css-3.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>CSS</div>
+            </div>
+            <div
+              className="skillContain expressSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/express.png"
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              {/* <div style={{ width: "70%" }}>Express</div> */}
+            </div>
+            <div
+              className="skillContain jwtSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/jwtLogo.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>JWT</div>
+            </div>
+            <div
+              className="skillContain reactSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/react.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>ReactJS</div>
+            </div>
+            <div
+              className="skillContain nodeSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/node-js.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>NodeJS</div>
+            </div>
+            <div
+              className="skillContain typeScriptSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/typescript.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>TypeScript</div>
+            </div>
+            <div
+              className="skillContain pythonSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/python.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>Python</div>
+            </div>
+            <div
+              className="skillContain javaSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/java.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>Java</div>
+            </div>
+            <div
+              className="skillContain mongoSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/mongo.webp"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>MongoDB</div>
+            </div>
+            <div
+              className="skillContain reduxSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/redux.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>Redux</div>
+            </div>
+            <div
+              className="skillContain cSkill"
+              style={{
+                height: "2.5rem",
+                minWidth: "5rem",
+                // border: "2px solid",
+                padding: "4px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                fontSize: "small",
+              }}
+            >
+              <img
+                src="/skills/c-.png"
+                style={{
+                  height: "100%",
+                  width: "30%",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+                alt=""
+              />
+              <div style={{ width: "70%" }}>C++</div>
+            </div>
+          </div>
         </div>
       </Tilt>
     </div>

@@ -244,7 +244,7 @@ const OneBody = () => {
             style={{
               height: "85%",
               width: "100%",
-              border: "1px solid",
+              //   border: "1px solid",
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "left",

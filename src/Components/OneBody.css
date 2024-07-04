@@ -35,11 +35,11 @@
 }
 
   .jsSkill:hover{
-    box-shadow: 0 0 30px #e5ad07;
+    box-shadow: 0 0 17px #e5ad07;
   }
 
   .htmlSkill:hover{
-    box-shadow: 0 0 30px #ff4b00;
+    box-shadow: 0 0 19px #ff4b00;
   }
 .htmlSkill{
     background: linear-gradient(135deg, #8a2f2f, #8e4e29);
@@ -47,7 +47,7 @@
 
   .gitSkill:hover{
 
-    box-shadow: 0 0 30px #f4f3f4;
+    box-shadow: 0 0 23px #f4f3f4;
   }
   .gitSkill img{
     filter: invert(1);
@@ -55,7 +55,7 @@
 
   .cssSkill:hover{
 
-    box-shadow: 0 0 30px #004ce8;
+    box-shadow: 0 0 23px #004ce8;
   }
   .cssSkill{
     background: linear-gradient(120deg, rgb(77 67 203), rgb(24 23 139));
@@ -65,30 +65,30 @@ filter: invert(1);
   }
 
   .expressSkill:hover{
-    box-shadow: 0 0 30px white;
+    box-shadow: 0 0 23px white;
   }
   .jwtSkill:hover{
-box-shadow: 0 0 30px #d539fe;  
+box-shadow: 0 0 23px #d539fe;  
 }
 .jwtSkill{
     background: linear-gradient(135deg, #d1205f, #79002b);
 }
 
 .nodeSkill:hover{
-    box-shadow: 0 0 30px #61b348;
+    box-shadow: 0 0 23px #61b348;
 }
 .nodeSkill{
     background: linear-gradient(135deg, #4aa030, #369c16);
 }
 .typeScriptSkill:hover{
-    box-shadow: 0 0 30px #1949a7;
+    box-shadow: 0 0 23px #1949a7;
 }
 .typeScriptSkill{
     background: linear-gradient(135deg, #1c16a6, #1949a7);
 }
 
 .pythonSkill:hover{
-    box-shadow: 0 0 30px #ffd94a;
+    box-shadow: 0 0 23px #ffd94a;
 }
 
 .pythonSkill{
@@ -96,35 +96,35 @@ box-shadow: 0 0 30px #d539fe;
 
 }
 .javaSkill:hover{
-    box-shadow: 0 0 30px #ca812e;
+    box-shadow: 0 0 23px #ca812e;
 }
 .javaSkill{
     background: linear-gradient(135deg, #ccae372b, #cd7613);
 }
 
 .mongoSkill:hover{
-    box-shadow: 0 0 30px #61b348;
+    box-shadow: 0 0 23px #61b348;
 }
 .mongoSkill{
     background: linear-gradient(135deg, #379a1963, #61b348);
 }
 
 .cSkill:hover{
-    box-shadow: 0 0 30px #00599c;
+    box-shadow: 0 0 23px #00599c;
 }
 .cSkill{
     background: linear-gradient(135deg, #1c16a6, #1949a7);
 }
 .reactSkill:hover{
-    /* box-shadow: 0 0 30px #00d5ff; */
-    box-shadow: 0 0 30px #004ce8;
+    /* box-shadow: 0 0 23px #00d5ff; */
+    box-shadow: 0 0 23px #004ce8;
 
 }
 .reactSkill{
     background: linear-gradient(135deg, #00d5ff, #004ce8);
 }
 .reduxSkill:hover{
-    box-shadow: 0 0 30px #d539fe;  
+    box-shadow: 0 0 23px #d539fe;  
 }
 
 .reduxSkill{

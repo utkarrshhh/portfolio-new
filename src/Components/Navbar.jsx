@@ -46,7 +46,7 @@ const Navbar = () => {
           </h1>
         </div>
         <div className="imgContainer subContainer">
-          <Link to="./UtkarshShuklaResume.pdf" target="_blank" download>
+          <Link to="./NEWRESUMEUTKARSH (1).pdf" target="_blank" download>
             <div className="imgSmallContainer">
               <img src="/resumeIcon.png" alt="Download Resume" />
             </div>

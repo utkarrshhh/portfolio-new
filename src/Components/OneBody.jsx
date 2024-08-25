@@ -43,9 +43,37 @@ const OneBody = () => {
       <Tilt options={defaultOptions} className="tilt-container">
         <div className="profileContainer simpleContainer glass2">
           <span className="profile-text">
-            Profile 2
+            Education
             <hr />
           </span>
+          <div className="kiitInfo">
+            <img style={{ filter: "invert(1)" }} src="/image.png" alt="" />
+            <div className="description">
+              Ryan International School, Shahjahanpur
+            </div>
+            <span>(2017-2021)</span>
+            <div className="kiitDesc">
+              <ul>
+                <li>• Stream - PCM</li>
+                <li>• 12th - 86%</li>
+                <li>• 10th - 91.2%</li>
+              </ul>
+            </div>
+          </div>
+          <div className="kiitInfo">
+            <img src="/kiitLogo.png" alt="" />
+            <div className="description">
+              Kalinga Institute Of Industrial Technology,
+            </div>
+            <span>(2021-2025)</span>
+            <div className="kiitDesc">
+              <ul>
+                <li>• Btech. CSE</li>
+                <li>• CGPA - 8.38</li>
+                <li>• 2021 - present</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Tilt>
       <Tilt options={defaultOptions} className="tilt-container">

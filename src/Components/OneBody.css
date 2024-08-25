@@ -1,132 +1,223 @@
-.simpleContainer{
-    border-radius: 10px;
-  
-    text-align: center;
-    /* color: black; */
-    /* font-size: 50; */
-      
-      
+/* Base Styles */
+.onebody-container {
+  min-height: 85vh;
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
-.glass2{
-    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.19);
-    /* box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37); */
+
+.tilt-container {
+  min-height: 70vh;
+  width: 20vw;
+  margin: 1rem;
+}
+
+.profileContainer {
+  min-height: 100%;
+  width: 100%;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text {
+  width: 100%;
+  height: 15%;
+  font-size: 1.4rem;
+}
+
+.content-container {
+  height: 85%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Space between the skill elements */
+  justify-content: start; /* Align skill elements to the start */
+}
+
+.content-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  width: auto; /* Allow the container to expand */
+  box-sizing: border-box;
+  max-width: 100%; /* Ensure it doesn’t overflow outside its parent */
+}
+.skillContain {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: small;
+  /* background-color: #f0f0f0;  */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  white-space: nowrap; /* Ensure the text and icon don't wrap inside the container */
+}
+.skillContain img {
+  height: 100%;
+  width: auto; /* Ensure the image scales proportionally */
+  object-fit: contain;
+  object-position: center;
+  margin-right: 0.5rem;
+}
+
+.profile-text hr {
+  margin: 10px 0; /* Add margin to hr for better spacing */
+}
+
+.jsSkill {
+  background: linear-gradient(to right, #d09f0d, #b2a109);
+  transition: 0.3s;
+}
+
+.jsSkill:hover {
+  box-shadow: 0 0 17px #e5ad07;
+}
+
+.htmlSkill:hover {
+  box-shadow: 0 0 19px #ff4b00;
+}
+.htmlSkill {
+  background: linear-gradient(135deg, #8a2f2f, #8e4e29);
+}
+
+.gitSkill:hover {
+  box-shadow: 0 0 23px #f4f3f4;
+  transition: 0.3s ease-in-out;
+}
+.gitSkill img {
+  filter: invert(1);
+}
+
+.cssSkill:hover {
+  box-shadow: 0 0 23px #004ce8;
+}
+.cssSkill {
+  background: linear-gradient(120deg, rgb(77 67 203), rgb(24 23 139));
+}
+.expressSkill img {
+  filter: invert(1);
+}
+
+.expressSkill:hover {
+  box-shadow: 0 0 23px white;
+  transition: 0.3s ease-in-out;
+}
+.jwtSkill:hover {
+  box-shadow: 0 0 23px #d539fe;
+}
+.jwtSkill {
+  background: linear-gradient(135deg, #d1205f, #79002b);
+  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.nodeSkill:hover {
+  box-shadow: 0 0 23px #61b348;
+}
+.nodeSkill {
+  background: linear-gradient(135deg, #4aa030, #369c16);
+  transition: 0.3s ease-in-out;
+}
+.dockerskill:hover {
+  box-shadow: 0 0 23px rgb(0 107 192);
+}
+.dockerskill {
+  background: linear-gradient(135deg, #6663b5, #1949a7);
+  transition: 0.3s ease-in-out;
+}
+
+.typeScriptSkill:hover {
+  box-shadow: 0 0 23px #1949a7;
+}
+.typeScriptSkill {
+  background: linear-gradient(135deg, #1c16a6, #1949a7);
+  transition: 0.3s ease-in-out;
+}
+
+.pythonSkill:hover {
+  box-shadow: 0 0 23px #da8619;
+  transition: 0.3s ease-in-out;
+}
+
+.pythonSkill {
+  background: linear-gradient(to right, #d09f0d, #b2a109);
+  transition: 0.3s ease-in-out;
+}
+.javaSkill:hover {
+  box-shadow: 0 0 23px #ca812e;
+}
+.javaSkill {
+  background: linear-gradient(135deg, #ccae372b, #cd7613);
+  transition: 0.3s ease-in-out;
+}
+
+.mongoSkill:hover {
+  box-shadow: 0 0 23px #61b348;
+}
+.mongoSkill {
+  background: linear-gradient(135deg, #379a1963, #61b348);
+  transition: 0.3s ease-in-out;
+}
+
+.cSkill:hover {
+  box-shadow: 0 0 23px #00599c;
+}
+.cSkill {
+  background: linear-gradient(135deg, #1c16a6, #1949a7);
+  transition: 0.3s ease-in-out;
+}
+.reactSkill:hover {
+  /* box-shadow: 0 0 23px #00d5ff; */
+  box-shadow: 0 0 23px #004ce8;
+}
+.reactSkill {
+  background: linear-gradient(135deg, #00d5ff, #004ce8);
+  transition: 0.3s ease-in-out;
+}
+.reduxSkill:hover {
+  box-shadow: 0 0 23px #d539fe;
+}
+
+.reduxSkill {
+  background: linear-gradient(135deg, #720dbd, #631680);
+  transition: 0.3s ease-in-out;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .tilt-container {
+    width: 30vw; /* Adjust width for tablets and small screens */
+    height: 50vh; /* Adjust height for tablets and small screens */
   }
-  .simpleContainer span{
-    font-family: monospace, monospace;
+
+  .profile-text {
+    font-size: 1.2rem; /* Adjust font size for tablets and small screens */
   }
 
-.skillContain{
-    transition: 0.3s;
-    margin-right: 7px;
-    margin-top: 3px;
+  .skillContain {
+    font-size: smaller;
+    padding: 0.3rem;
+  }
 }
 
-  .inforKiit span{
-    display: inline-block;
+.margin {
+  margin: 3px 9px;
+}
+
+@media (max-width: 480px) {
+  .tilt-container {
+    width: 80vw; /* Full width for small screens */
+    height: auto; /* Adjust height for small screens */
+    min-height: 10vw;
   }
 
-.jsSkill{ 
-    background: linear-gradient(to right, #d09f0d, #b2a109);
-    transition: 0.3s;
-}
-
-  .jsSkill:hover{
-    box-shadow: 0 0 17px #e5ad07;
+  .profile-text {
+    font-size: 1rem; /* Further adjust font size for small screens */
   }
-
-  .htmlSkill:hover{
-    box-shadow: 0 0 19px #ff4b00;
-  }
-.htmlSkill{
-    background: linear-gradient(135deg, #8a2f2f, #8e4e29);
-}
-
-  .gitSkill:hover{
-
-    box-shadow: 0 0 23px #f4f3f4;
-  }
-  .gitSkill img{
-    filter: invert(1);
-  }
-
-  .cssSkill:hover{
-
-    box-shadow: 0 0 23px #004ce8;
-  }
-  .cssSkill{
-    background: linear-gradient(120deg, rgb(77 67 203), rgb(24 23 139));
-  }
-  .expressSkill img{
-filter: invert(1);
-  }
-
-  .expressSkill:hover{
-    box-shadow: 0 0 23px white;
-  }
-  .jwtSkill:hover{
-box-shadow: 0 0 23px #d539fe;  
-}
-.jwtSkill{
-    background: linear-gradient(135deg, #d1205f, #79002b);
-}
-
-.nodeSkill:hover{
-    box-shadow: 0 0 23px #61b348;
-}
-.nodeSkill{
-    background: linear-gradient(135deg, #4aa030, #369c16);
-}
-.typeScriptSkill:hover{
-    box-shadow: 0 0 23px #1949a7;
-}
-.typeScriptSkill{
-    background: linear-gradient(135deg, #1c16a6, #1949a7);
-}
-
-.pythonSkill:hover{
-    box-shadow: 0 0 23px #ffd94a;
-}
-
-.pythonSkill{
-    background: linear-gradient(to right, #d09f0d, #b2a109);
-
-}
-.javaSkill:hover{
-    box-shadow: 0 0 23px #ca812e;
-}
-.javaSkill{
-    background: linear-gradient(135deg, #ccae372b, #cd7613);
-}
-
-.mongoSkill:hover{
-    box-shadow: 0 0 23px #61b348;
-}
-.mongoSkill{
-    background: linear-gradient(135deg, #379a1963, #61b348);
-}
-
-.cSkill:hover{
-    box-shadow: 0 0 23px #00599c;
-}
-.cSkill{
-    background: linear-gradient(135deg, #1c16a6, #1949a7);
-}
-.reactSkill:hover{
-    /* box-shadow: 0 0 23px #00d5ff; */
-    box-shadow: 0 0 23px #004ce8;
-
-}
-.reactSkill{
-    background: linear-gradient(135deg, #00d5ff, #004ce8);
-}
-.reduxSkill:hover{
-    box-shadow: 0 0 23px #d539fe;  
-}
-
-.reduxSkill{
-    background: linear-gradient(135deg, #720dbd, #631680);
 }

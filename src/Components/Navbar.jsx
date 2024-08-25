@@ -5,13 +5,13 @@ import OneBody from "./OneBody";
 import TwoBody from "./TwoBody";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 const Navbar = () => {
   useGSAP(() => {
     gsap.from("hr", {
       delay: 1.4,
       duration: 0.5,
       x: -100,
-      //   fontWeight: "200",
       opacity: 0,
       ease: "power3.out",
     });
@@ -23,198 +23,52 @@ const Navbar = () => {
       delay: 0.5,
       ease: "power3.out",
     });
+
     gsap.from(".subContainer", {
       duration: 0.3,
       x: 100,
       opacity: 0,
       delay: 1,
-      //   ease: "bounce.out",
-      //   stagger: 0.2,
     });
+
     gsap.from(".nameContainer", {
       scale: "0.4",
       delay: 1,
     });
   });
+
   return (
     <>
-      <div
-        style={{
-          width: "90%",
-          height: "15vh",
-          color: "white",
-          // background: "hsla(0,0%,4%,.25)",
-          // textAlign: "center",
-          display: "flex",
-          justifyContent: "spaceAround",
-          alignItems: "center",
-          borderRadius: "20px",
-          margin: "1rem auto auto",
-        }}
-        className="nav-container glass"
-      >
-        <div
-          style={{
-            height: "100%",
-            width: "80%",
-            display: "flex",
-            // justifyContent: "center",
-            alignItems: "center",
-            justifyContent: "left",
-            padding: "0 30px",
-          }}
-          className="nameContainer subContainer"
-        >
-          <h1 style={{ fontWeight: "100" }}>
-            Utkarsh shukla <hr />
+      <div className="nav-container glass">
+        <div className="nameContainer subContainer">
+          <h1>
+            Utkarsh Shukla <hr />
           </h1>
         </div>
-        <div
-          className="imgContainer subContainer"
-          style={{
-            width: "20%",
-            height: "60%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 5px",
-          }}
-        >
-          <Link
-            to="./UtkarshShuklaResume.pdf"
-            target="_blank"
-            download
-            style={{ background: "none", height: "100%" }}
-          >
-            <div
-              className="imgSmallContainer"
-              style={{
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "5px",
-                filter: "invert(1)",
-              }}
-            >
-              <img
-                style={{
-                  height: "70%",
-
-                  // borderRadius: "50%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                src="/resumeIcon.png"
-                alt="Download Resume"
-              />
+        <div className="imgContainer subContainer">
+          <Link to="./UtkarshShuklaResume.pdf" target="_blank" download>
+            <div className="imgSmallContainer">
+              <img src="/resumeIcon.png" alt="Download Resume" />
             </div>
           </Link>
-          <Link
-            to="mailto:utkarsh3639@gmail.com"
-            style={{ background: "none", height: "100%" }}
-          >
-            <div
-              className="imgSmallContainer"
-              style={{
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "5px",
-                filter: "invert(1)",
-              }}
-            >
-              <img
-                style={{
-                  height: "70%",
-
-                  // borderRadius: "50%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                src="/mail.png"
-                alt=""
-              />
+          <Link to="mailto:utkarsh3639@gmail.com">
+            <div className="imgSmallContainer">
+              <img src="/mail.png" alt="Mail" />
             </div>
           </Link>
-          <Link
-            to="https://github.com/utkarrshhh"
-            target="_blank"
-            style={{ background: "none", height: "100%" }}
-          >
-            <div
-              className="imgSmallContainer"
-              style={{
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "5px",
-                filter: "invert(1)",
-              }}
-            >
-              <img
-                style={{
-                  height: "70%",
-
-                  // borderRadius: "50%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                src="./github.png"
-                alt=""
-              />
+          <Link to="https://github.com/utkarrshhh" target="_blank">
+            <div className="imgSmallContainer">
+              <img src="/github.png" alt="GitHub" />
             </div>
           </Link>
-          <Link to="#" style={{ background: "none", height: "100%" }}>
-            <div
-              className="imgSmallContainer"
-              style={{
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "5px",
-                filter: "invert(1)",
-              }}
-            >
-              <img
-                style={{
-                  height: "70%",
-
-                  // borderRadius: "50%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                src="/twitter.png"
-                alt=""
-              />
+          <Link to="#">
+            <div className="imgSmallContainer">
+              <img src="/twitter.png" alt="Twitter" />
             </div>
           </Link>
-          <Link to="#" style={{ background: "none", height: "100%" }}>
-            <div
-              className="imgSmallContainer"
-              style={{
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "5px",
-                filter: "invert(1)",
-              }}
-            >
-              <img
-                style={{
-                  height: "70%",
-
-                  // borderRadius: "50%",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                }}
-                src="/linkedin.png"
-                alt=""
-              />
+          <Link to="#">
+            <div className="imgSmallContainer">
+              <img src="./linkedin.png" alt="LinkedIn" />
             </div>
           </Link>
         </div>

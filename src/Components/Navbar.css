@@ -1,6 +1,120 @@
-.imgContainer img:hover{
-    scale: 1.2;
+/* Base Styles (Desktop) */
+.nav-container {
+  width: 95%; /* Increased width for a larger navbar */
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  margin: 1rem auto;
+  padding: 1rem; /* Added padding to increase navbar height */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fixed background with slightly darker opacity */
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it is above other content */
+  transition: background 0.3s ease; /* Smooth background transition */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
 }
-.imgSmallContainer img{
-    transition: 0.3s;
+
+/* .nav-container:hover {
+  background: rgba(0, 0, 0, 0.9); 
+} */
+
+.nameContainer {
+  height: auto;
+  width: 70%; /* Adjust width for better centering */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Adjusted to start aligning */
+  padding: 0 20px; /* Adjusted padding */
+}
+
+.nameContainer h1 {
+  font-size: 1.5rem; /* Adjusted font size */
+  font-weight: 300; /* Adjusted font weight */
+}
+
+.imgContainer {
+  width: 20%; /* Set width to 30% for icons */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Evenly spaces icons */
+  padding: 0 10px; /* Adjusted padding */
+}
+.imgContainer a {
+  overflow: hidden;
+}
+
+.imgSmallContainer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  filter: invert(1);
+  flex: 1; /* Ensures even distribution of icons */
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+  box-sizing: border-box; /* Ensures padding is included in the element’s width */
+}
+
+.imgSmallContainer:hover {
+  transform: scale(1.3); /* Scale up on hover */
+}
+
+.imgSmallContainer img {
+  height: 30px; /* Reduced icon height */
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nameContainer {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .nameContainer h1 {
+    font-size: 1.2rem; /* Adjusted font size for mobile */
+  }
+
+  .imgContainer {
+    width: 100%; /* Full width for mobile */
+    justify-content: center; /* Center icons on mobile */
+    margin-top: 1rem;
+  }
+
+  .imgSmallContainer {
+    margin: 0 10px; /* Spacing between icons */
+  }
+
+  img {
+    height: 20px; /* Further reduced icon height for mobile */
+  }
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

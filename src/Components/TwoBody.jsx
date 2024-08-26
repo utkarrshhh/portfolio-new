@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import "./twoBody.css";
 import { Tilt } from "react-tilt";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +64,7 @@ const TwoBody = () => {
   });
 
   return (
-    <div style={{ height: "100vh", width: "90%", margin: "auto" }}>
+    <div style={{ width: "90%", margin: "auto" }}>
       <div
         ref={stringRef}
         className="string "
@@ -90,15 +90,31 @@ const TwoBody = () => {
         </svg>
       </div>
 
-      <div
-        className="twoBody glass"
-        style={{
-          height: "88vh",
-          width: "85vw",
-          overflowY: "hidden",
-          margin: "auto",
-        }}
-      ></div>
+      <div className="twoBody glass">
+        <span className="profile-text">
+          Projects
+          <hr />
+        </span>
+        <div className="container-project">
+          <div className="projects-container glass">
+            <img src="/projects/spotify.png" alt="" className="project-image" />
+          </div>
+          <div className="projects-container glass">
+            <img
+              src="/projects/clipControl1.png"
+              alt=""
+              className="project-image"
+            />
+          </div>
+          <div className="projects-container glass">
+            <img
+              src="/projects/mac-os-home.png"
+              alt=""
+              className="project-image"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

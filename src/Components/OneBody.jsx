@@ -16,6 +16,11 @@ const OneBody = () => {
       stagger: 0.2,
       delay: 1.3,
     });
+    gsap.from(".tilt-container", {
+      border: "none",
+      delay: 1.5,
+      ease: "power3.in",
+    });
   });
 
   const defaultOptions = {

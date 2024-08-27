@@ -4,11 +4,9 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./twoBody.css";
 import { Tilt } from "react-tilt";
-
 gsap.registerPlugin(ScrollTrigger);
 const TwoBody = () => {
   const stringRef = useRef(null);
-
   const initialPath = "M 10 30 Q 600 30 1190 30";
   const finalPath = "M 10 30 Q 600 30 1190 30";
   //   const defaultOptions = {
@@ -93,12 +91,9 @@ const TwoBody = () => {
           />
         </svg>
       </div>
-
       <div className="twoBody glass">
-        <span className="profile-text">
-          Projects
-          <hr />
-        </span>
+        <span className="profile-text">Projects</span>
+        <hr />
         <div className="container-project">
           <div className="projects-container glass">
             <img
@@ -114,7 +109,7 @@ const TwoBody = () => {
               "Mac-inspired React dashboard that brings the elegance of macOS to
               your browser with seamless navigation and intuitive design."
             </div>
-            <hr />
+            {/* <hr /> */}
             <div className="project-links">
               <p>
                 Github Repo -{" "}
@@ -126,12 +121,9 @@ const TwoBody = () => {
                 </a>
               </p>
               <p>
-                Visit the website ('not responsive')-{" "}
-                <a
-                  href="https://github.com/utkarrshhh/mac-os-home-react"
-                  target="_blank"
-                >
-                  Explore the source code
+                Explore (Desktop only)-{" "}
+                <a href="https://mac-os-home-react.vercel.app/" target="_blank">
+                  click here
                 </a>
               </p>
               <span></span>
@@ -143,9 +135,58 @@ const TwoBody = () => {
               alt=""
               className="project-image"
             />
+            <div className="project-title">
+              Clip Control
+              <hr />
+            </div>
+            <div className="project-description">
+              "Random photo management app"
+            </div>
+            {/* <hr /> */}
+            <div className="project-links">
+              <p>
+                Github Repo -{" "}
+                <a
+                  href="https://github.com/utkarrshhh/clip-control-frontend"
+                  target="_blank"
+                >
+                  Explore the source code
+                </a>
+              </p>
+            </div>
           </div>
           <div className="projects-container glass">
             <img src="/projects/spotify.png" alt="" className="project-image" />
+            <div className="project-title">
+              Spotify lookalike music player
+              <hr />
+            </div>
+            <div className="project-description">
+              "Mac-inspired React dashboard that brings the elegance of macOS to
+              your browser with seamless navigation and intuitive design."
+            </div>
+            {/* <hr /> */}
+            <div className="project-links">
+              <p>
+                Github Repo -{" "}
+                <a
+                  href="https://github.com/utkarrshhh/spotify-main-app"
+                  target="_blank"
+                >
+                  Explore the source code
+                </a>
+              </p>
+              <p>
+                Explore (Desktop only)-{" "}
+                <a
+                  href="https://musicplayer-clone-app.vercel.app/"
+                  target="_blank"
+                >
+                  click here
+                </a>
+              </p>
+              <span></span>
+            </div>
           </div>
         </div>
       </div>

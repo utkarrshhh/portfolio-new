@@ -49,17 +49,21 @@ const TwoBody = () => {
   useGSAP(() => {
     gsap.from(".twoBody", {
       opacity: 0,
-      //   overflow: "hidden",
+      overflow: "hidden",
       duration: 0.5,
       x: 100,
       ease: "power3.out",
       scrollTrigger: {
         scroller: "body",
         trigger: ".twoBody",
-        start: "top 100%",
-        end: "top 50%",
-        scrub: 2,
+        start: "top 80%",
+        end: "top 60%",
+        scrub: 3,
       },
+    });
+    gsap.to(".twoBody", {
+      opacity: 1,
+      x: 0,
     });
   });
 
@@ -97,7 +101,41 @@ const TwoBody = () => {
         </span>
         <div className="container-project">
           <div className="projects-container glass">
-            <img src="/projects/spotify.png" alt="" className="project-image" />
+            <img
+              src="/projects/mac-os-home.png"
+              alt=""
+              className="project-image"
+            />
+            <div className="project-title">
+              Mac-Os desktop project
+              <hr />
+            </div>
+            <div className="project-description">
+              "Mac-inspired React dashboard that brings the elegance of macOS to
+              your browser with seamless navigation and intuitive design."
+            </div>
+            <hr />
+            <div className="project-links">
+              <p>
+                Github Repo -{" "}
+                <a
+                  href="https://github.com/utkarrshhh/mac-os-home-react"
+                  target="_blank"
+                >
+                  Explore the source code
+                </a>
+              </p>
+              <p>
+                Visit the website ('not responsive')-{" "}
+                <a
+                  href="https://github.com/utkarrshhh/mac-os-home-react"
+                  target="_blank"
+                >
+                  Explore the source code
+                </a>
+              </p>
+              <span></span>
+            </div>
           </div>
           <div className="projects-container glass">
             <img
@@ -107,11 +145,7 @@ const TwoBody = () => {
             />
           </div>
           <div className="projects-container glass">
-            <img
-              src="/projects/mac-os-home.png"
-              alt=""
-              className="project-image"
-            />
+            <img src="/projects/spotify.png" alt="" className="project-image" />
           </div>
         </div>
       </div>

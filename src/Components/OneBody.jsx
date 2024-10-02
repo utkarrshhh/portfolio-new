@@ -43,6 +43,20 @@ const OneBody = () => {
             Profile 1
             <hr />
           </span>
+          <span>
+            <p>
+              Hey there! 👋 I'm Utkarsh, a passionate full-stack web developer
+              who loves turning coffee into code. Whether it's building sleek,
+              user-friendly interfaces with ReactJS or crafting powerful, secure
+              backends with Node.js and Express, I’m all about creating
+              immersive digital experiences. I geek out over everything from
+              database magic with PostgreSQL and MongoDB to seamless cloud
+              deployments with Docker. And yes, I'm always ready to dive into
+              some JavaScript wizardry! When I’m not coding, you’ll find me
+              perfecting my latest passion project or leveling up on the newest
+              tech trends. Let’s build something awesome together! 🚀
+            </p>
+          </span>
         </div>
       </Tilt>
       <Tilt options={defaultOptions} className="tilt-container">

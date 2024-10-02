@@ -144,7 +144,7 @@ const TwoBody = () => {
             </div>
             {/* <hr /> */}
             <div className="project-links">
-              <p>
+              <p className="githubLink">
                 Github Repo -{" "}
                 <a
                   href="https://github.com/utkarrshhh/clip-control-frontend"

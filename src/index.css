@@ -10,7 +10,8 @@
 html,
 body {
   height: 100%;
-  background: linear-gradient(to right, #3d164d, #4e0c69);
+  /* background: linear-gradient(to right, #3d164d, #4e0c69); */
+  background: linear-gradient(to right, #4b0369, #240825);
   /* background:black; */
   color: white;
 }
@@ -55,4 +56,10 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #5c1f79;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(to right, #2d093d, #240825);
+  }
 }

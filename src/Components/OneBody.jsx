@@ -40,11 +40,17 @@ const OneBody = () => {
       <Tilt options={defaultOptions} className="tilt-container">
         <div className="profileContainer simpleContainer glass2">
           <span className="profile-text">
-            Profile 1
+            About Me
             <hr />
           </span>
           <span>
-            <p>
+            <p
+              style={{
+                // fontWeight: "10px",
+                fontWeight: "lighter",
+                fontSize: "18px",
+              }}
+            >
               Hey there! 👋 I'm Utkarsh, a passionate full-stack web developer
               who loves turning coffee into code. Whether it's building sleek,
               user-friendly interfaces with ReactJS or crafting powerful, secure

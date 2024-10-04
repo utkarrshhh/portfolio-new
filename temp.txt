@@ -2,4 +2,4 @@ so i rebuild the docker image of this project by typing docker build -t amateur3
 ran docker login to login to my dokcer GitHu
 -> then i did this to tag my docker hub file to this docker ->docker tag amateur3639/utkarsh-personal amateur3639/utkarsh-personal:latest
 
-tag works like we are using alias for the image name before pushing it to docker hub and would use the same name as we used during tagged name for the above case we would use utkars-personal:latest
+tag works like we are using alias for the image name before pushing it to docker hub and would use the same name as we used during tagged name for the above case we would use utkarsh-personal:latest

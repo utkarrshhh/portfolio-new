@@ -15,6 +15,12 @@
   margin: 1rem;
   /* border: 1px solid white; */
 }
+.tilt-container2 {
+  min-height: 20vh;
+  width: 90%;
+  margin: 1rem;
+  /* border: 1px solid white; */
+}
 
 .profileContainer {
   min-height: 100%;

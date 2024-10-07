@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./OneBody.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -6,6 +6,22 @@ import { Tilt } from "react-tilt";
 
 const OneBody = () => {
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768); // 768px is a common mobile breakpoint
+    };
+
+    // Initial check
+    checkScreenSize();
+
+    // Listen for window resize
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useGSAP(() => {
     gsap.from(".simpleContainer", {
@@ -48,8 +64,8 @@ const OneBody = () => {
       </div>
       <div ref={containerRef} className="onebody-container">
         <Tilt options={defaultOptions} className="tilt-container">
-          <div className="profileContainer simpleContainer glass2">
-            <span className="profile-text">
+          <div className="profileContainer simpleContainer glass2 aboutMe">
+            <span className="profile-text  aboutMeText">
               About Me
               <hr />
             </span>
@@ -58,7 +74,8 @@ const OneBody = () => {
                 style={{
                   // fontWeight: "10px",
                   fontWeight: "lighter",
-                  fontSize: "18px",
+                  textAlign: "center",
+                  // fontSize: "18px",
                 }}
               >
                 Hey there! 👋 I'm Utkarsh, a passionate full-stack web developer
@@ -67,10 +84,15 @@ const OneBody = () => {
                 secure backends with Node.js and Express, I’m all about creating
                 immersive digital experiences. I geek out over everything from
                 database magic with PostgreSQL and MongoDB to seamless cloud
-                deployments with Docker. And yes, I'm always ready to dive into
-                some JavaScript wizardry! When I’m not coding, you’ll find me
-                perfecting my latest passion project or leveling up on the
-                newest tech trends. Let’s build something awesome together! 🚀
+                deployments with Docker.
+                {!isMobile && (
+                  <>
+                    And yes, I'm always ready to dive into some JavaScript
+                    wizardry! When I’m not coding, you’ll find me perfecting my
+                    latest passion project or leveling up on the newest tech
+                    trends. Let’s build something awesome together! 🚀
+                  </>
+                )}
               </p>
             </span>
           </div>

@@ -41,7 +41,7 @@ const Navbar = () => {
     <>
       <div className="nav-container glass">
         <div className="nameContainer subContainer">
-          <h1>
+          <h1 style={{ color: " white", textShadow: "6px 6px 5px #000000" }}>
             Utkarsh Shukla <hr />
           </h1>
         </div>
